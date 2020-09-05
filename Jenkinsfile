@@ -7,32 +7,32 @@ pipeline {
       }
     }
 
-    stage('Test Firefox') {
+    stage('firefox') {
       parallel {
-        stage('Test Firefox') {
+        stage('firefox') {
           steps {
             echo 'testing firefox'
           }
         }
 
-        stage('Test Chrome') {
+        stage('edge') {
           steps {
-            sh 'echo \'Testing Chrome\''
+            echo 'testing edge'
           }
         }
 
-        stage('Test Edge') {
+        stage('chrome') {
           steps {
-            sh 'echo \'Testing Edge\''
+            echo 'testing chrome'
           }
         }
 
       }
     }
 
-    stage('Deploy') {
+    stage('deploy') {
       steps {
-        echo 'Deploying'
+        echo 'deploying'
       }
     }
 
